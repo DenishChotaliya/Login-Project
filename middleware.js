@@ -26,7 +26,7 @@ export const middleware = (request) => {
       return NextResponse.redirect(new URL("/", request.nextUrl));
     }
   }
-  // if (path === "/Profile" && role == "") {
-  //   return NextResponse.redirect(new URL("/Login", request.nextUrl));
-  // }
+  if (path === "/Profile" && role == "") {
+    return NextResponse.redirect(new URL("/Login", request.nextUrl));
+  }
 };
